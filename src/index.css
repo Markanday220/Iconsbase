@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f172a;
+  --color-primary-light: #1e293b;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  
+  --color-brand-purple: #8b5cf6;
+  --color-brand-cyan: #06b6d4;
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  .glass-dark {
+    @apply bg-black/40 backdrop-blur-xl border border-white/10;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-[#01214A] font-sans antialiased selection:bg-[#F5AF02]/30;
+}
